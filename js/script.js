@@ -19,7 +19,8 @@ fetch("latest_scheme.html")
 
 // header
 // basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
-let headerPath = basePath === "/" ? "header.html" : "../header.html";
+let headerPath = basePath === "/west_bengal_schemes_updates/" ? "header.html" : "../header.html";
+
 console.log("header : " + headerPath)
 
 fetch(headerPath)
