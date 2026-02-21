@@ -44,7 +44,7 @@ document.getElementById("main_container").innerHTML =
 let footerPath = basePath == "/west_bengal_schemes_updates/" ? "footer.html" : "../footer.html";
 console.log("foot : " + footerPath)
 
-fetch(footerPath)
+fetch("footer.html")
     .then(response => response.text())
     .then(data => {
     document.getElementById("footer_container").innerHTML = data;
