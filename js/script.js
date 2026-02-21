@@ -35,6 +35,7 @@ document.getElementById("main_container").innerHTML =
     "<p class='text-red-500'>Failed to load content.</p>";
 });
 
+
 // /west_bengal_schemes_updates/schemes/
 // /west_bengal_schemes_updates/    normal
 
