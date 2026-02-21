@@ -1,0 +1,78 @@
+<header class="bg-blue-700 text-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Top Bar -->
+    <div class="flex justify-between items-center py-4">
+
+      <!-- Logo / Brand -->
+      <a href="/index.html" class="text-xl font-bold hover:text-gray-200">
+        West Bengal Scheme and Updates
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="/index.html" class="hover:text-gray-200">Home</a>
+        <a href="/about.html" class="hover:text-gray-200">About</a>
+
+        <!-- Schemes Dropdown -->
+        <div class="relative group inline-block">
+          <button class="hover:text-gray-200 flex items-center space-x-1">
+            <span>Schemes</span>
+            <i class="fas fa-chevron-down text-sm mt-1 transition-transform duration-500 
+           group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-0 hidden 
+              group-hover:block 
+              opacity-0 group-hover:opacity-100 
+              translate-y-1 group-hover:translate-y-0
+              transition-all duration-300 delay-75
+              bg-transparent text-gray-800 rounded shadow-lg w-40 z-50">
+            <a href="#" class="block h-4 pointer-events-none" aria-label="blank"></a>
+            <a href="/schemes/yuva_sathi.html" class="block px-4 py-2 rounded bg-white hover:bg-gray-100">
+              Yuva Scheme
+            </a>
+          </div>
+        </div>
+
+        <a href="/contact.html" class="hover:text-gray-200">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" type="button" class="text-white text-2xl focus:outline-none"
+          aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-blue-700 pb-3">
+      <a href="/index.html" class="block px-4 py-2 hover:bg-blue-600">
+        Home
+      </a>
+      <a href="/about.html" class="block px-4 py-2 hover:bg-blue-600">
+        About
+      </a>
+      <a href="/contact.html" class="block px-4 pt-1 mb-6 hover:bg-blue-600">Contact Us</a>
+      <!-- Mobile schemes -->
+      <div class="border-t border-white-100 bg-white">
+        <button id="mobile-schemes-btn"
+          class="w-full text-left px-4 py-2 hover:bg-white-600 flex justify-between items-center border-b-4 border-green-500 bg-white shadow-2xl"
+          aria-label="Toggle Schemes dropdown">
+          <span class="text-blue-900">Schemes</span>
+          <i id="mobile-dropdown-icon" class="fas fa-chevron-down transition-transform duration-300 text-blue-900"></i>
+        </button>
+
+        <div id="mobile-dropdown" class="hidden flex flex-col bg-blue-600">
+          <a href="/schemes/yuva_sathi.html" class="block px-6 py-2 hover:bg-blue-500">
+            Yuva Scheme
+          </a>
+          
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+<script src="js/script.js" defer></script>
