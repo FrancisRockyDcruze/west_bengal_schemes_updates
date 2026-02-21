@@ -17,25 +17,6 @@ fetch("latest_scheme.html")
 }
 
 
-// header
-// basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
-// let headerPath = basePath.includes("/schemes/") ? "../header.html" : "header.html";
-
-// console.log("header : " + headerPath)
-
-// fetch(headerPath)
-// .then(response => response.text())
-// .then(data => {
-// document.getElementById("header_container").innerHTML = data;
-// })
-// .catch(error => {
-// console.error("Error loading Yuva content:", error);
-
-// document.getElementById("main_container").innerHTML =
-//     "<p class='text-red-500'>Failed to load content.</p>";
-// });
-
-
 fetch(basePath.includes("/schemes/") ? "../header.html" : "header.html")
   .then(res => res.text())
   .then(data => {
@@ -54,9 +35,6 @@ fetch(basePath.includes("/schemes/") ? "../header.html" : "header.html")
 // /west_bengal_schemes_updates/    normal
 
 
-// footer
-// document.addEventListener("DOMContentLoaded", function () {
-// basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
 // let footerPath = basePath === "/" ? "footer.html" : "../footer.html";
 let footerPath = basePath.includes("/schemes/") ? "../footer.html" : "footer.html";
 console.log("footer : " + footerPath)
