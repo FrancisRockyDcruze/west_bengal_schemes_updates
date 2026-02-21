@@ -19,22 +19,36 @@ fetch("latest_scheme.html")
 
 // header
 // basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
-let headerPath = basePath.includes("/schemes/") ? "../header.html" : "header.html";
+// let headerPath = basePath.includes("/schemes/") ? "../header.html" : "header.html";
 
-console.log("header : " + headerPath)
+// console.log("header : " + headerPath)
 
-fetch(headerPath)
-.then(response => response.text())
-.then(data => {
-document.getElementById("header_container").innerHTML = data;
-})
-.catch(error => {
-console.error("Error loading Yuva content:", error);
+// fetch(headerPath)
+// .then(response => response.text())
+// .then(data => {
+// document.getElementById("header_container").innerHTML = data;
+// })
+// .catch(error => {
+// console.error("Error loading Yuva content:", error);
 
-document.getElementById("main_container").innerHTML =
-    "<p class='text-red-500'>Failed to load content.</p>";
-});
+// document.getElementById("main_container").innerHTML =
+//     "<p class='text-red-500'>Failed to load content.</p>";
+// });
 
+
+fetch(basePath.includes("/schemes/") ? "../header.html" : "header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header_container").innerHTML = data;
+
+    // Fix links dynamically
+    document.querySelectorAll("#header_container a").forEach(a => {
+      let href = a.getAttribute("href");
+      if (!href.startsWith("http")) {
+        a.setAttribute("href", basePath.includes("/schemes/") ? "../" + href : href);
+      }
+    });
+  });
 
 // /west_bengal_schemes_updates/schemes/
 // /west_bengal_schemes_updates/    normal
