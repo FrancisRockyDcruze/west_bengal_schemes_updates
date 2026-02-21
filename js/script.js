@@ -40,7 +40,8 @@ document.getElementById("main_container").innerHTML =
 // footer
 // document.addEventListener("DOMContentLoaded", function () {
 // basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
-let footerPath = basePath === "/" ? "footer.html" : "../footer.html";
+// let footerPath = basePath === "/" ? "footer.html" : "../footer.html";
+let footerPath = basePath == "/west_bengal_schemes_updates/" ? "footer.html" : "../footer.html";
 console.log("foot : " + footerPath)
 
 fetch(footerPath)
