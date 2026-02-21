@@ -1,7 +1,7 @@
 let basePath = window.location.pathname;
 console.log(basePath)
 
-if(basePath == "/" || basePath.includes("/index"))
+if(basePath == "/" || basePath.includes("/index") || basePath == "/west_bengal_schemes_updates/")
 {
 fetch("latest_scheme.html")
     .then(response => response.text())
