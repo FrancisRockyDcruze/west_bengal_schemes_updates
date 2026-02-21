@@ -19,7 +19,7 @@ fetch("latest_scheme.html")
 
 // header
 // basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
-let headerPath = ("/west_bengal_schemes_updates/schemes/").includes(basePath) ? "../header.html" : "header.html";
+let headerPath = basePath.includes("/schemes/") ? "../header.html" : "header.html";
 
 console.log("header : " + headerPath)
 
@@ -35,13 +35,15 @@ document.getElementById("main_container").innerHTML =
     "<p class='text-red-500'>Failed to load content.</p>";
 });
 
+// /west_bengal_schemes_updates/schemes/
+// /west_bengal_schemes_updates/    normal
 
 
 // footer
 // document.addEventListener("DOMContentLoaded", function () {
 // basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
 // let footerPath = basePath === "/" ? "footer.html" : "../footer.html";
-let footerPath = ("/west_bengal_schemes_updates/schemes/").includes(basePath) ? "../footer.html" : "footer.html";
+let footerPath = basePath.includes("/schemes/") ? "../footer.html" : "footer.html";
 console.log("footer : " + footerPath)
 
 fetch(footerPath)
