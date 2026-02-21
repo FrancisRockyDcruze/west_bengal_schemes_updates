@@ -23,7 +23,7 @@ let headerPath = basePath.includes("/west_bengal_schemes_updates/schemes/") ? "h
 
 console.log("header : " + headerPath)
 
-fetch("header.html")
+fetch(headerPath)
 .then(response => response.text())
 .then(data => {
 document.getElementById("header_container").innerHTML = data;
@@ -44,7 +44,7 @@ document.getElementById("main_container").innerHTML =
 let footerPath = basePath.includes("/west_bengal_schemes_updates/schemes/") ? "footer.html" : "../footer.html";
 console.log("foot : " + footerPath)
 
-fetch("footer.html")
+fetch(footerPath)
     .then(response => response.text())
     .then(data => {
     document.getElementById("footer_container").innerHTML = data;
