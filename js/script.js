@@ -72,3 +72,22 @@ document.addEventListener('click', function (e) {
     }
   }
 });
+
+document.addEventListener('click', function (e) {
+  if (e.target.closest('#checkstatusbtn')) {
+    const checkstatusMenu = document.getElementById('status-menu');
+    if(checkstatusMenu)
+    {
+      checkstatusMenu.classList.toggle('hidden');
+    }
+  }
+})
+
+document.addEventListener('click', function (e) {
+  if (e.target.closest('#check-status-btn')) {
+    const checkstatusMenu = document.getElementById('check-status-dropdown');
+    if (checkstatusMenu) {
+      checkstatusMenu.classList.toggle('hidden');
+    }
+  }
+});

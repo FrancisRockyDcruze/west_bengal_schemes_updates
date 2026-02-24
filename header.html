@@ -38,6 +38,37 @@ in prod => "index" relative -->
         </div>
 
         <a href="contact.html" class="hover:text-gray-200">Contact Us</a>
+
+        <!-- check status button -->
+         <div class="relative group inline-block bg-red-500 p-2 rounded-lg border" id="checkstatusbtn">
+          <button class="hover:text-gray-200 flex items-center space-x-1 bg-red font-bold">
+            <span>Check Status</span>
+          </button>
+          <div id="status-menu" class="absolute left-0 hidden
+               text-gray-800 rounded shadow-lg w-40 z-50 my-4">
+            <a href="https://jaibangla.wb.gov.in/track-applicant-public" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded bg-white hover:bg-gray-100">
+              <span>বার্ধক্য ভাতা</span>
+              <br>
+              <span class="text-xs">WCD Old Age Pension</span>
+            </a>
+            <a href="https://jaibangla.wb.gov.in/track-applicant-public" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded bg-white hover:bg-gray-100">
+              <span>বিধবা ভাতা</span>
+              <br>
+              <span class="text-xs">WCD Widow Pension</span>
+            </a>
+            <a href="https://socialsecurity.wb.gov.in/track-applicant" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded bg-white hover:bg-gray-100">
+              <span>লক্ষ্মীর ভান্ডার</span>
+              <br>
+              <span class="text-xs">Lakshmir Bhandar</span>
+            </a>
+            <a href="https://yubasathi.wb.gov.in/public/bys/BYS_Login.aspx" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded bg-white hover:bg-gray-100">
+              <span>যুব সাথী</span>
+              <br>
+              <span class="text-xs">Yuba Sathi</span>
+            </a>
+          </div>
+        </div>
+
       </nav>
 
       <!-- Mobile Hamburger -->
@@ -57,9 +88,10 @@ in prod => "index" relative -->
         About
       </a>
       <a href="contact.html" class="block px-4 pt-1 mb-6 hover:bg-blue-600">Contact Us</a>
+      
       <!-- Mobile schemes -->
-      <div class="border-t border-white-100 bg-white">
-        <button id="mobile-schemes-btn"
+      <div class="border-t border-white-100 bg-white mb-4">
+        <button id="mobile-schemes-btn" type="button"
           class="w-full text-left px-4 py-2 hover:bg-white-600 flex justify-between items-center border-b-4 border-green-500 bg-white shadow-2xl"
           aria-label="Toggle Schemes dropdown">
           <span class="text-blue-900">Schemes</span>
@@ -68,12 +100,46 @@ in prod => "index" relative -->
 
         <div id="mobile-dropdown" class="hidden flex flex-col bg-blue-600">
           <a href="schemes/yuva_sathi.html" class="block px-6 py-2 hover:bg-blue-500">
-            Yuva Scheme
+            Yuva Sathi
           </a>
           
         </div>
       </div>
 
+      <!-- Check Status schemes -->
+      <div class="border-t border-white-900 bg-gray-900">
+        <button id="check-status-btn" type="button"
+          class="w-full text-left px-4 py-2 flex justify-between items-center border-b-4 border-green-500 bg-red-600 shadow-2xl"
+          aria-label="Toggle Schemes dropdown">
+          <span class="text-white-900 font-bold">Check Status</span>
+        </button>
+
+        <div id="check-status-dropdown" class="hidden flex flex-col bg-white-600">
+          <!-- <a href="schemes/yuva_sathi.html" class="block px-6 py-2 hover:bg-blue-500">
+            Yuva Sathi
+          </a> -->
+          <a href="https://jaibangla.wb.gov.in/track-applicant-public" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded hover:bg-white-800 text-red-500 font-bold">
+              <span>বার্ধক্য ভাতা</span>
+              <br>
+              <span class="text-xs">WCD Old Age Pension</span>
+            </a>
+            <a href="https://jaibangla.wb.gov.in/track-applicant-public" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded hover:bg-gray-800 text-green-500 font-bold">
+              <span>বিধবা ভাতা</span>
+              <br>
+              <span class="text-xs">WCD Widow Pension</span>
+            </a>
+            <a href="https://socialsecurity.wb.gov.in/track-applicant" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded hover:bg-gray-800 text-yellow-500 font-bold">
+              <span>লক্ষ্মীর ভান্ডার</span>
+              <br>
+              <span class="text-xs">Lakshmir Bhandar</span>
+            </a>
+            <a href="https://yubasathi.wb.gov.in/public/bys/BYS_Login.aspx" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 rounded hover:bg-gray-800 text-orange-500 font-bold">
+              <span>যুব সাথী</span>
+              <br>
+              <span class="text-xs">Yuba Sathi</span>
+            </a>
+        </div>
+      </div>
     </div>
 
   </div>
